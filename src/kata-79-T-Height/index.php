@@ -26,7 +26,7 @@ $number = readline("Introduce un Numero: ");
 for ($i = 0; $i < $number; $i++) {
      for ($j = 0; $j < $number; $j++) {
           if ($j == 1) { 
-            
+              
           }
      }
      echo PHP_EOL;

@@ -22,18 +22,23 @@ Imput: 4, Output: TT TT
                     T*/     
 
 $number = readline("Introduce un Numero: ");
+
         
 for ($i = 0; $i < $number; $i++) {
      if ($i != 0) { 
          for ($j = 0; $j < $number; $j++) {
-              echo "T";
+              $middle = (int) ($number / 2);
+              if ($j == $middle) {
+                  echo "T";
+              } else {
+                echo " ";
+              }
          }
      } else { 
         for ($k = 0; $k < $number; $k++) {
              echo "T";
         }
      }
-     
      echo PHP_EOL;
 }
 

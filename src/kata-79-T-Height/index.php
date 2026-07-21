@@ -24,11 +24,16 @@ Imput: 4, Output: TT TT
 $number = readline("Introduce un Numero: ");
         
 for ($i = 0; $i < $number; $i++) {
-     for ($j = 0; $j < $number; $j++) {
-          if ($j == 1) { 
-              
-          }
+     if ($i != 0) { 
+         for ($j = 0; $j < $number; $j++) {
+              echo "T";
+         }
+     } else { 
+        for ($k = 0; $k < $number; $k++) {
+             echo "T";
+        }
      }
+     
      echo PHP_EOL;
 }
 

@@ -22,9 +22,9 @@ Imput: 4, Output: TT TT
                     T*/     
 
 do {
-$number = readline("Introduce un Numero: ");
+$number = readline("Enter a Number: ");
 if ($number <= 0 || filter_var($number,FILTER_VALIDATE_INT) === false) {
-    echo "Negative Numbers, Number Zero, Decimals, Symbols and Letters are NOT allowed... Try Again";
+    echo "Negative Numbers, Number Zero, Decimals, Symbols and Letters are NOT allowed...";
 }
 } while ($number <= 0 || filter_var($number,FILTER_VALIDATE_INT) === false);
 
@@ -34,7 +34,7 @@ if ($pair == 0) {
     $number += 1;
 }
 
-$middle =  ($number / 2);
+$middle = (int)($number / 2);
         
 for ($i = 0; $i < $number; $i++) {
      if ($pair == 0 && $i == ($number - 1)) {

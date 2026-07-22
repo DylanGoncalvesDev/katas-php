@@ -22,12 +22,17 @@ Imput: 4, Output: TT TT
                     T*/     
 
 $number = readline("Introduce un Numero: ");
+$pair = $number % 2;
 
+if ($pair == 0) {
+    $number += 1;
+}
+
+$middle = (int) ($number / 2);
         
 for ($i = 0; $i < $number; $i++) {
      if ($i != 0) { 
          for ($j = 0; $j < $number; $j++) {
-              $middle = (int) ($number / 2);
               if ($j == $middle) {
                   echo "T";
               } else {
@@ -36,7 +41,11 @@ for ($i = 0; $i < $number; $i++) {
          }
      } else { 
         for ($k = 0; $k < $number; $k++) {
-             echo "T";
+             if ($pair == 0 && $k == $middle) {
+                 echo " ";
+             } else {
+               echo "T";
+             }
         }
      }
      echo PHP_EOL;

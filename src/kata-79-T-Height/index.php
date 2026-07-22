@@ -31,6 +31,9 @@ if ($pair == 0) {
 $middle = (int) ($number / 2);
         
 for ($i = 0; $i < $number; $i++) {
+     if ($pair == 0 && $i == ($number - 1)) {
+         break;
+     }
      if ($i != 0) { 
          for ($j = 0; $j < $number; $j++) {
               if ($j == $middle) {
@@ -48,6 +51,7 @@ for ($i = 0; $i < $number; $i++) {
              }
         }
      }
+     
      echo PHP_EOL;
 }
 

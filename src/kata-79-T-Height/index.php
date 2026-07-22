@@ -21,14 +21,20 @@ Imput: 4, Output: TT TT
                     T    
                     T*/     
 
+do {
 $number = readline("Introduce un Numero: ");
+if ($number <= 0 || filter_var($number,FILTER_VALIDATE_INT) === false) {
+    echo "Negative Numbers, Number Zero, Decimals, Symbols and Letters are NOT allowed... Try Again";
+}
+} while ($number <= 0 || filter_var($number,FILTER_VALIDATE_INT) === false);
+
 $pair = $number % 2;
 
 if ($pair == 0) {
     $number += 1;
 }
 
-$middle = (int) ($number / 2);
+$middle =  ($number / 2);
         
 for ($i = 0; $i < $number; $i++) {
      if ($pair == 0 && $i == ($number - 1)) {
